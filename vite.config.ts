@@ -11,7 +11,7 @@ export default defineConfig({
       entry: resolve(__dirname, 'src/index.ts'),
       // the proper extensions will be added
       fileName: 'index',
-      name: 'ui-kit-flytor',
+      name: 'ui-kit',
     },
     rollupOptions: {
       external: [
