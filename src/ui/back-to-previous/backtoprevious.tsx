@@ -1,8 +1,8 @@
 import React from 'react'
 
-import { BackToPreviousIcon } from '@/assets/svg/back-to-previous-icon-svg'
-
 import s from './backtoprevious.module.scss'
+
+import { BackToPreviousIcon } from '../../assets/svg/back-to-previous-icon-svg'
 
 type PropsType = {
   href: string
