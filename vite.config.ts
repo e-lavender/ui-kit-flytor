@@ -20,6 +20,7 @@ export default defineConfig({
         ...Object.keys(devDependencies),
       ],
     },
+    sourcemap: true,
     target: 'esnext',
   },
 })
