@@ -1,7 +1,8 @@
 import { ComponentPropsWithoutRef, FC } from 'react'
 
-import { Typography } from '@/ui'
 import * as LabelRDX from '@radix-ui/react-label'
+
+import { Typography } from '../typography'
 
 type LabelProps = {
   id?: string

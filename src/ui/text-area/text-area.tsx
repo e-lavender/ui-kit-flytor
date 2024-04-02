@@ -1,9 +1,10 @@
 import { ChangeEvent, ComponentPropsWithoutRef, forwardRef, useId, useState } from 'react'
 
-import { Typography } from '@/ui'
 import { clsx } from 'clsx'
 
 import s from './text-area.module.scss'
+
+import { Typography } from '../typography'
 
 type TextAreaType = {
   disabled?: boolean

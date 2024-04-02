@@ -1,11 +1,11 @@
 import { forwardRef, useState } from 'react'
 
-import { HideIcon, SearchIcon, ShowIcon } from '@/assets'
-import { Typography } from '@/ui/typography/typography'
 import { clsx } from 'clsx'
 
 import s from '../lib/styles/text-field.module.scss'
 
+import { HideIcon, SearchIcon, ShowIcon } from '../../../assets'
+import { Typography } from '../../typography'
 import { INPUT_TYPES } from '../lib/constants/input-type-enum'
 import { InputProps } from '../model/text-field-types'
 

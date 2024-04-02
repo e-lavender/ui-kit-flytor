@@ -5,11 +5,12 @@ import {
   HeadProps,
   RowProps,
   TableProps,
-} from '@/ui/table/tabel-types'
+} from './tabel-types'
 
 const Root = (props: TableProps) => {
   return <table {...props} />
 }
+
 const Head = (props: HeadProps) => {
   return <thead {...props} />
 }

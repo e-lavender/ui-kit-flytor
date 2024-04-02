@@ -1,12 +1,13 @@
 import { ReactNode } from 'react'
 
-import { CloseIcon } from '@/assets'
-import { Typography } from '@/ui'
 import * as Dialog from '@radix-ui/react-dialog'
 import { FocusOutsideEvent, PointerDownOutsideEvent } from '@radix-ui/react-dismissable-layer'
 import { clsx } from 'clsx'
 
 import s from './modal.module.scss'
+
+import { CloseIcon } from '../../assets'
+import { Typography } from '../typography'
 
 type ModalProps = {
   children: ReactNode

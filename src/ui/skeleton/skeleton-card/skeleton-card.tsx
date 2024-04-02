@@ -1,6 +1,6 @@
 import { PropsWithChildren } from 'react'
 
-import { Skeleton } from '@/ui/skeleton/skeleton'
+import { Skeleton } from '../skeleton'
 
 type SkeletonCardProps = {
   circle?: boolean

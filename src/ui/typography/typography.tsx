@@ -1,10 +1,11 @@
 import { ComponentPropsWithoutRef, ElementType } from 'react'
 
-import { Tags } from '@/ui/typography/enum'
-import { TypographyProps } from '@/ui/typography/types'
 import { clsx } from 'clsx'
 
-import s from '@/ui/typography/typography.module.scss'
+import s from './typography.module.scss'
+
+import { Tags } from './enum'
+import { TypographyProps } from './types'
 
 export const Typography = <T extends ElementType>({
   as = 'span',

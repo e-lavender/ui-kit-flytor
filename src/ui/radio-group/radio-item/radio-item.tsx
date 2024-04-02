@@ -1,8 +1,9 @@
-import { Label } from '@/ui'
 import * as RadioSelect from '@radix-ui/react-radio-group'
 import { clsx } from 'clsx'
 
 import s from './radio-item.module.scss'
+
+import { Label } from '../../label'
 
 type RadioItemProps = {
   disabled?: boolean

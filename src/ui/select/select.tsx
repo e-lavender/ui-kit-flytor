@@ -1,9 +1,9 @@
-import { ArrowDownIcon } from '@/assets'
 import * as SelectRadix from '@radix-ui/react-select'
 import { clsx } from 'clsx'
 
 import s from './select.module.scss'
 
+import { ArrowDownIcon } from '../../assets'
 import { SelectModel, SelectVariant } from './select-types'
 
 const IconSize = {

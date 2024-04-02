@@ -1,12 +1,13 @@
 import { FC, ReactNode, useId } from 'react'
 
-import { CheckIcon } from '@/assets'
-import { Typography } from '@/ui'
-import { Label } from '@/ui/label'
 import * as CheckboxRDX from '@radix-ui/react-checkbox'
 import { clsx } from 'clsx'
 
 import s from './checkbox.module.scss'
+
+import { CheckIcon } from '../../assets'
+import { Label } from '../label'
+import { Typography } from '../typography'
 
 export type CheckboxProps = {
   checked?: boolean

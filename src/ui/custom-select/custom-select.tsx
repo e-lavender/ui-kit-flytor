@@ -1,12 +1,13 @@
 import { ChangeEvent } from 'react'
 
-import { ChevronDown } from '@/assets'
-import { CustomSelectProps } from '@/ui/custom-select/custom-select.types'
-import CustomSelectOptions from '@/ui/custom-select/custom-select-options'
-import { useCustomSelect } from '@/ui/custom-select/useCustomSelect'
 import { clsx } from 'clsx'
 
 import s from './custom-select.module.scss'
+
+import { ChevronDown } from '../../assets'
+import { CustomSelectProps } from './custom-select.types'
+import CustomSelectOptions from './custom-select-options'
+import { useCustomSelect } from './useCustomSelect'
 
 export const CustomSelect = ({
   disabled,
