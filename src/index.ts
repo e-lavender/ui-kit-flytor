@@ -1,3 +1,3 @@
 import './styles/index.scss'
-export * from './ui'
+export * from './ui/index'
 export { clsx } from 'clsx'
