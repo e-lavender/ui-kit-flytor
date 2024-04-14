@@ -14,7 +14,7 @@ export const LanguageSelect = ({
   changeLangHandler: (value: string) => void
   currentSelectedLocale: ReactElement | number | string
   isMobile: boolean
-  languageSelectData: { icon: Element; id: number; language: any }[]
+  languageSelectData: { icon: ReactElement; id: number; language: string }[]
 }) => {
   // const { isMobile } = useMatchMedia()
   // const { asPath, locale, pathname, push, query } = useRouter()

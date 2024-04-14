@@ -1,7 +1,7 @@
 import { ReactElement } from 'react'
 
 export type FlagComponentProps = {
-  icon: any
+  icon: ReactElement
   isMobile: boolean
   language: any
   //locale?: LocalType
