@@ -14,7 +14,7 @@ type CommonProps = {
   onChange: (value: string) => void
   open?: boolean
   options: Array<ObjectOption | string>
-  placeholder?: ReactElement | string
+  placeholder?: ReactElement | number | string
   rootClassName?: string
   value: ReactElement | number | string
   variant?: SelectVariant

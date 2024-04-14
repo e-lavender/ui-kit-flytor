@@ -1,18 +1,20 @@
+import { ReactElement } from 'react'
+
 import { Select } from '../select'
 import { SelectVariant } from '../select/select-types'
 import { FlagComponent } from './flag-component'
-import { languageSelectOptions } from './language-select-data'
+import { FlagSelectOption } from './language-select-types'
 
 export const LanguageSelect = ({
   changeLangHandler,
-  icon,
+  currentSelectedLocale,
   isMobile,
-  language,
+  languageSelectData,
 }: {
   changeLangHandler: (value: string) => void
-  icon: any
+  currentSelectedLocale: ReactElement | number | string
   isMobile: boolean
-  language: any
+  languageSelectData: { icon: Element; id: number; language: any }[]
 }) => {
   // const { isMobile } = useMatchMedia()
   // const { asPath, locale, pathname, push, query } = useRouter()
@@ -22,21 +24,31 @@ export const LanguageSelect = ({
 
   //, locale = LocalType.EN
   // const { [typedLocale]: language } = t.navigation.header
-  const currentSelectedLocale = FlagComponent({ icon, isMobile, language })
 
   // const changeLangHandler = (value: string) => {
   //   void push({ pathname, query }, asPath, { locale: value })
   // }
+  const languageSelectOptions: Array<FlagSelectOption> = languageSelectData.map(data => {
+    return {
+      label: (
+        <FlagComponent
+          icon={data.icon}
+          isMobile={isMobile}
+          key={data.id}
+          language={data.language}
+        />
+      ),
+      value: data.language,
+    }
+  })
 
   return (
-    <div>
-      <Select
-        onChange={changeLangHandler}
-        options={languageSelectOptions}
-        placeholder={currentSelectedLocale}
-        value={currentSelectedLocale}
-        variant={isMobile ? SelectVariant.LanguageMobile : SelectVariant.Language}
-      />
-    </div>
+    <Select
+      onChange={changeLangHandler}
+      options={languageSelectOptions}
+      placeholder={currentSelectedLocale}
+      value={currentSelectedLocale}
+      variant={isMobile ? SelectVariant.LanguageMobile : SelectVariant.Language}
+    />
   )
 }
