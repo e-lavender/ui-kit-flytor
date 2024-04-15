@@ -5,14 +5,14 @@ import { FlagSelectOption } from './language-select-types'
 
 export const LanguageSelect = ({
   changeLangHandler,
-  currentSelectedLocale,
   isMobile,
   languageSelectData,
+  value,
 }: {
   changeLangHandler: (value: string) => void
-  currentSelectedLocale: ValueType
   isMobile: boolean
   languageSelectData: ValueType[]
+  value: string
 }) => {
   // const { isMobile } = useMatchMedia()
   // const { asPath, locale, pathname, push, query } = useRouter()
@@ -44,8 +44,8 @@ export const LanguageSelect = ({
     <Select
       onChange={changeLangHandler}
       options={languageSelectOptions}
-      placeholder={currentSelectedLocale.icon}
-      value={currentSelectedLocale.icon}
+      placeholder={value}
+      value={value}
       variant={isMobile ? SelectVariant.LanguageMobile : SelectVariant.Language}
     />
   )

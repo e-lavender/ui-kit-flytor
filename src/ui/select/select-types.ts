@@ -8,6 +8,7 @@ export enum SelectVariant {
 }
 
 type ObjectOption = { label: ReactElement | string; value: string }
+
 export type ValueType = {
   icon: ReactElement
   id: number
