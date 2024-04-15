@@ -1,7 +1,5 @@
-import { ReactElement } from 'react'
-
 import { Select } from '../select'
-import { SelectVariant } from '../select/select-types'
+import { SelectVariant, ValueType } from '../select/select-types'
 import { FlagComponent } from './flag-component'
 import { FlagSelectOption } from './language-select-types'
 
@@ -11,10 +9,10 @@ export const LanguageSelect = ({
   isMobile,
   languageSelectData,
 }: {
-  changeLangHandler: (value: string) => void
-  currentSelectedLocale: ReactElement | number | string
+  changeLangHandler: (value: ValueType) => void
+  currentSelectedLocale: ValueType
   isMobile: boolean
-  languageSelectData: { icon: ReactElement; id: number; language: string }[]
+  languageSelectData: ValueType[]
 }) => {
   // const { isMobile } = useMatchMedia()
   // const { asPath, locale, pathname, push, query } = useRouter()
@@ -46,8 +44,8 @@ export const LanguageSelect = ({
     <Select
       onChange={changeLangHandler}
       options={languageSelectOptions}
-      placeholder={currentSelectedLocale}
-      value={currentSelectedLocale}
+      placeholder={currentSelectedLocale.icon}
+      value={currentSelectedLocale.icon}
       variant={isMobile ? SelectVariant.LanguageMobile : SelectVariant.Language}
     />
   )
