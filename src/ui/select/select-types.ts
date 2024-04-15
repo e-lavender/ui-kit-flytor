@@ -8,11 +8,17 @@ export enum SelectVariant {
 }
 
 type ObjectOption = { label: ReactElement | string; value: string }
-export type ValueType = { icon: ReactElement; id: number; language: string }
+export type ValueType = {
+  icon: ReactElement
+  id: number
+  label: ReactElement | string
+  language: string
+  value: string
+}
 
 type CommonProps = {
   label?: string
-  onChange: (value: ValueType) => void
+  onChange: (value: string) => void
   open?: boolean
   options: Array<ObjectOption | string>
   placeholder?: ReactElement | number | string

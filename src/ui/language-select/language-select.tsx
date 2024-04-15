@@ -9,7 +9,7 @@ export const LanguageSelect = ({
   isMobile,
   languageSelectData,
 }: {
-  changeLangHandler: (value: ValueType) => void
+  changeLangHandler: (value: string) => void
   currentSelectedLocale: ValueType
   isMobile: boolean
   languageSelectData: ValueType[]
