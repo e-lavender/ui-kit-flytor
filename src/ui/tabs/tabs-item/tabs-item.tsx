@@ -13,7 +13,7 @@ type TabsItemProps = {
 }
 export const TabsItem = ({ children, className, ...props }: PropsWithChildren<TabsItemProps>) => {
   return (
-    <Tabs.Trigger className={clsx(s.item && className)} {...props}>
+    <Tabs.Trigger className={clsx(s.item, className)} {...props}>
       {children}
     </Tabs.Trigger>
   )
