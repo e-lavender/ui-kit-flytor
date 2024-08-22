@@ -1,7 +1,7 @@
 import { ReactNode } from 'react'
 
 import * as Dialog from '@radix-ui/react-dialog'
-import { FocusOutsideEvent, PointerDownOutsideEvent } from '@radix-ui/react-dismissable-layer'
+import { DismissableLayerProps } from '@radix-ui/react-dismissable-layer'
 import { clsx } from 'clsx'
 
 import s from './modal.module.scss'
@@ -20,7 +20,6 @@ type ModalContentProps = {
   className?: string
   isModified?: boolean
   onClose?: () => void
-  onInteractOutside?: (event: FocusOutsideEvent | PointerDownOutsideEvent) => void
   title?: string
 }
 export const Modal = ({ children, onChange, open }: ModalProps) => {
@@ -38,7 +37,7 @@ const ModalContent = ({
   onClose,
   title,
   ...props
-}: ModalContentProps) => {
+}: DismissableLayerProps & ModalContentProps) => {
   const styles = clsx(s.main, className)
 
   return (
