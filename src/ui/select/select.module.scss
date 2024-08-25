@@ -54,9 +54,9 @@
     align-items: center;
   }
 
-  //&.language {
+  // &.language {
   //  gap: 0;
-  //}
+  // }
 
   &.pagination {
     gap: 2px;
@@ -183,4 +183,8 @@
   &.disabled {
     color: var(--color-dark-100);
   }
+}
+
+.fullWidth {
+  width: 100%;
 }

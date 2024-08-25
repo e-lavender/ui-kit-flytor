@@ -16,6 +16,7 @@ const IconSize = {
 export const Select = ({
   className,
   disabled,
+  fullWidth = false,
   label,
   onChange,
   open,
@@ -31,7 +32,7 @@ export const Select = ({
     icon: clsx(s.icon, s[variant]),
     item: clsx(s.item, s[variant]),
     label: clsx(s.label, disabled && s.disabled),
-    root: rootClassName,
+    root: clsx(rootClassName, fullWidth && s.fullWidth),
     trigger: clsx(s.trigger, s[variant], className),
   }
   const withoutPlaceholder = variant === SelectVariant.Pagination ? value : 'Select Box'

@@ -18,6 +18,7 @@ export type ValueType = {
 }
 
 type CommonProps = {
+  fullWidth?: boolean
   label?: string
   onChange: (value: string) => void
   open?: boolean
@@ -28,4 +29,4 @@ type CommonProps = {
   variant?: SelectVariant
   width?: CSSProperties['width']
 }
-export type SelectModel = Omit<ComponentPropsWithoutRef<'select'>, keyof CommonProps> & CommonProps
+export type SelectModel = CommonProps & Omit<ComponentPropsWithoutRef<'select'>, keyof CommonProps>
