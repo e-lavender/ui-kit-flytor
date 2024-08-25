@@ -39,34 +39,32 @@ export const Select = ({
   const rootStyles = { width }
 
   return (
-    <div className={classNames.root}>
-      <SelectRadix.Group>
-        <SelectRadix.Label className={classNames.label}>{label}</SelectRadix.Label>
-        <SelectRadix.Root disabled={disabled} onValueChange={onChange} open={open}>
-          <SelectRadix.Trigger className={classNames.trigger} style={rootStyles}>
-            <SelectRadix.Value placeholder={placeholder || withoutPlaceholder}>
-              {value}
-            </SelectRadix.Value>
-            <SelectRadix.Icon className={classNames.icon}>
-              <ArrowDownIcon size={IconSize[variant]} />
-            </SelectRadix.Icon>
-          </SelectRadix.Trigger>
-          <SelectRadix.Portal>
-            <SelectRadix.Content className={classNames.content} position={'popper'}>
-              {options?.map((option, index) => {
-                const { label, value } =
-                  typeof option === 'string' ? { label: option, value: option } : option
+    <SelectRadix.Group>
+      <SelectRadix.Label className={classNames.label}>{label}</SelectRadix.Label>
+      <SelectRadix.Root disabled={disabled} onValueChange={onChange} open={open}>
+        <SelectRadix.Trigger className={classNames.trigger} style={rootStyles}>
+          <SelectRadix.Value placeholder={placeholder || withoutPlaceholder}>
+            {value}
+          </SelectRadix.Value>
+          <SelectRadix.Icon className={classNames.icon}>
+            <ArrowDownIcon size={IconSize[variant]} />
+          </SelectRadix.Icon>
+        </SelectRadix.Trigger>
+        <SelectRadix.Portal>
+          <SelectRadix.Content className={classNames.content} position={'popper'}>
+            {options?.map((option, index) => {
+              const { label, value } =
+                typeof option === 'string' ? { label: option, value: option } : option
 
-                return (
-                  <SelectRadix.Item className={classNames.item} key={index} value={value}>
-                    {label}
-                  </SelectRadix.Item>
-                )
-              })}
-            </SelectRadix.Content>
-          </SelectRadix.Portal>
-        </SelectRadix.Root>
-      </SelectRadix.Group>
-    </div>
+              return (
+                <SelectRadix.Item className={classNames.item} key={index} value={value}>
+                  {label}
+                </SelectRadix.Item>
+              )
+            })}
+          </SelectRadix.Content>
+        </SelectRadix.Portal>
+      </SelectRadix.Root>
+    </SelectRadix.Group>
   )
 }
