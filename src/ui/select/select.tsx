@@ -39,7 +39,7 @@ export const Select = ({
   const rootStyles = { width }
 
   return (
-    <SelectRadix.Group>
+    <SelectRadix.Group className={classNames.root}>
       <SelectRadix.Label className={classNames.label}>{label}</SelectRadix.Label>
       <SelectRadix.Root disabled={disabled} onValueChange={onChange} open={open}>
         <SelectRadix.Trigger className={classNames.trigger} style={rootStyles}>
